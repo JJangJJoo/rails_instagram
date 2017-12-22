@@ -1,0 +1,7 @@
+<h1>글보기</h1>
+<p><%= @post.title %></p>
+<p><%= @post.content %></p>
+<img src="<%= @post.avatar %>"></p>
+<a href="/posts/edit/<%= @post.id %>" class="card-link btn btn-primary">수정</a>
+<a href="/posts/destroy/<%= @post.id %>" class="card-link btn btn-danger">삭제</a>
+<%= link_to "[삭제]", "/posts/destroy/#{@post.id}", data: {method: "post", confirm: "진짜삭제할겨?"} %>
